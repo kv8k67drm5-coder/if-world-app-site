@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Authorization result — If World Draft Uploader</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Authorization result</h1>
+<p>This page is the redirect destination for the <strong>If World Draft Uploader</strong> application. If you arrived here after authorizing the app with TikTok, the authorization code is shown below. The uploader tool uses this code once to connect the creator's own TikTok account.</p>
+<p>Authorization code:</p>
+<p><code id="code">(none)</code></p>
+<p lang="ja">このページは If World Draft Uploader の認可リダイレクト先です。TikTok でアプリを許可した後にこのページへ来た場合、上のコードが認可用コードです。</p>
+<script>
+  var params = new URLSearchParams(window.location.search);
+  var code = params.get('code');
+  if (code) { document.getElementById('code').textContent = code; }
+</script>
+</main>
+</body>
+</html>
